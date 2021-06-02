@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+    <title>Covid-19/Data</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/album/">
+    <script src="https://kit.fontawesome.com/402ec5a488.js" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:1500,900" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="album.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    
+  </head>
+  <body>
+    
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark  fixed-top  text-white underitalics">
+          <a class="navbar-brand mr-auto text-warning under" href=""><h3>Covie-Data</h3></a>
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./index.html"><h4>Home</h4></a>
+              </li>
+              <li class="nav-item  active">
+                <a class="nav-link text-right" href="./data.html"><h4>Covid-19 Data</h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./vaccine.html"><h4>Vaccine Portal</h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./id.html"><h4>ID's</h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./dashboard.html"><h4>Dashboard</h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./about.html"><h4>About</h4></a>
+              </li>
+            </ul>
+            
+          </div>
+        </nav>
+      </header>
+
+<main id="main" >
+
+  <section class="jumbotron">
+    <div class="container text-center">
+      
+      <h2 class="text-dark">We'll try to fetch the best data available in the open public API's.The data what we show here is completely dependent on API's.</h2>
+      <p>
+        
+        <button class="btn btn-md btn-primary text-center text-white" onclick="getNews()">
+            Articles/News related to Covid-19 &raquo;
+          </button>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 bg-warning shadow-sm text-dark">
+            <img src=" https://images.unsplash.com/photo-1511068797325-6083f0f872b1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" width="100%" height="275">
+
+            <div class="card-body">
+              <p class="card-text">Get daily report totals of a whole.(Get updated data on deceased worldwide)</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                      <button class="btn btn-md btn-primary text-center text-white" onclick="DailyReport()">
+                        View &raquo;
+                      </button>
+                  
+                        </div>
+                        
+                    </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 bg-dark shadow-sm text-white">
+            <img src="https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" width="100%" height="275">
+           
+            <div class="card-body">
+                
+              <p class="card-text">Get latest deceased till date totals.(Recovered, Deaths, Latest Updated) </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button class="btn btn-md btn-primary text-center text-white" onclick="TotalReports()">
+                        View &raquo;
+                    </button>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 bg-warning shadow-sm text-dark">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" width="100%" height="275">
+
+            <div class="card-body">
+              <p class="card-text">Get latest data of all countries.(confirmed, recovered, deaths).</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button class="btn btn-md btn-primary text-center text-white" onclick="LatestData()">
+                        View &raquo;
+                    </button>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 bg-dark shadow-sm text-white">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=702&q=80" width="100%" height="275">
+            
+            <div class="card-body">
+              <p class="card-text">Get daily report of all countries(Deceased, recovered and more).</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button class="btn btn-md btn-primary text-center text-white" onclick="DailyReportofCountries()">
+                        View &raquo;
+                    </button>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 bg-warning shadow-sm text-dark">
+            <img src="https://images.unsplash.com/photo-1614107151491-6876eecbff89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" width="100%" height="275">
+
+            <div class="card-body ">
+
+              <p class="card-text">Enter the country name to get the data.(Get criteria datas till date.)</p>
+              <div id="toggleSe" class="">
+              <input class="form-control mr-sm-2 " id="country-search" type="text" placeholder="Enter country name" aria-label="Search">
+              <i class="fas fa-search " onclick="seeCountryFullData()"></i>
+              <div class="search-strings">
+                  <p>See the search strings before using search engine<a class="text-center" href="./countryname.html">  here.</a></p>
+              </div>
+              
+              </div>
+              
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button class="btn btn-md btn-primary text-center text-white" onclick="toggleSearch()">
+                        <a class="text-white">View &raquo;</a>
+                    </button>
+                 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 bg-dark shadow-sm text-white">
+            <img src="https://images.unsplash.com/photo-1615101940027-e4c038e3c2d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80" width="100%" height="275">
+
+            <div class="card-body">
+              <p class="card-text">Get live report of a country.(Get data of confirmed, recovered and more)</p>
+              <div id="toggleDa" class="">
+                <input class="form-control mr-sm-2" id="live-search" type="text" placeholder="Enter country name" aria-label="Search">
+                <i class="fas fa-search" onclick="liveSearchofCountry()"></i>
+                <div class="search-strings">
+                    <p>See the search strings before using search engine<a class="" href="./countryname.html">  here.</a></p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button class="btn btn-md btn-primary text-center text-white" onclick="toggleData()">
+                        <a class="text-white">View &raquo;</a>
+                    </button>
+                  
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 bg-warning shadow-sm text-dark">
+            <img src="https://images.unsplash.com/photo-1584118624012-df056829fbd0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80" width="100%" height="275">
+
+            <div class="card-body">
+              <p class="card-text">Get Covid-19 data statewise for each state in India.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button class="btn btn-md btn-primary text-center text-white" onclick="getDataStateWise()">
+                        View &raquo;
+                    </button>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 bg-dark shadow-sm text-white">
+            <img src="https://images.unsplash.com/photo-1558622215-1f12e24d7978?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" width="100%" height="275">
+
+            <div class="card-body">
+              <p class="card-text">Get Covid-19 data districtwise for each state in India.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button class="btn btn-md btn-primary text-center text-white" onclick="getDistrictWise()">
+                        View &raquo;
+                    </button>
+                  
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 bg-warning shadow-sm text-dark">
+            <img src="https://images.unsplash.com/photo-1472173148041-00294f0814a2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" width="100%" height="275">
+
+            <div class="card-body">
+              <p class="card-text">The history of cases in India starting from 30<sup>th</sup> January 2020.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="text-center align-items-center">
+                    <button class="btn btn-md btn-primary text-center text-white" onclick="historyCases()">
+                        View &raquo;
+                    </button>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+
+
+<script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      
+      
+  </body>
+</html>

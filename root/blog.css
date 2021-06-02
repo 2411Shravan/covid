@@ -1,0 +1,84 @@
+/* stylelint-disable selector-list-comma-newline-after */
+
+
+
+h1,  h3, h4, h5{
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+
+main{
+  margin-top:90px;
+  
+  
+  
+  
+}
+.showRef h6{
+  text-transform: uppercase;
+  
+}
+
+
+@media(max-width:967px){
+  .showTitle h3{
+    font-size: 20px;
+  }
+  .showRef h6{
+    font-size: 13px;
+  }
+}
+.showNews{
+  margin-top:20px;
+}
+.live{
+  margin-bottom:30px;
+}
+.underitalics .under{
+  text-decoration: underline;
+  font-style: oblique;
+}
+
+@media (max-width:500px){
+  .jumbotron h1{
+    font-size:25px;
+  }
+}
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.navbar{
+  background:black;
+}
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
