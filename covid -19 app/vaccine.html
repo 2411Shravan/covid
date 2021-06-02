@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Covid-19/Data</title>
+
+    
+    <script src="https://kit.fontawesome.com/402ec5a488.js" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="./vaccine.js" defer></script>
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        i{
+            cursor: pointer;
+        }
+        @media (max-width: 1199px){
+        .getoverview img{
+        display:none;
+        }
+}
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="./blog.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark  fixed-top  text-white underitalics">
+          <a class="navbar-brand mr-auto text-warning under" href=""><h2>Covie-Data</h2></a>
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./index.html"><h4>Home</h4></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link text-right" href="./data.html"><h4>Covid-19 Data</h4></a>
+              </li>
+              <li class="nav-item  active">
+                <a class="nav-link text-right" href="./vaccine.html"><h4>Vaccine Portal</h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./id.html"><h4>ID's</h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-right" href="#"><h4>Dashboard</h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./about.html"><h4>About</h4></a>
+              </li>
+            </ul>
+            
+          </div>
+        </nav>
+      </header>
+
+      
+
+<main role="main" class="container" id="isn">
+
+    
+     <div class="jumbotron text-white rounded bg-dark">
+        <div class="col-md-10 px-0">
+          <h1 class=" font-oblique">Get Long data over vaccines/vaccinations around the world.</h1>
+          <p class="lead my-3">Get complete data/information over vaccination centres, vaccines available live for user input particular location.
+              Also you'll get phase wise vaccine/s information. Treatment analytics overwide, funders for vaccine development etc....
+          </p>
+        </div>
+        
+      </div>
+    
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Indian Vaccination</strong>
+              <h3 class="mb-0">Get Vaccine Availability using Pin-Code</h3>
+              <div class="mb-1 text-success" style="font-weight:bold;">Live</div>
+              <p class="card-text mb-auto">This option will return you the data of total vaccine availability at the Primary Health Centers at areas covered by pin-code entered by you.(Use correct pincode in the format of ex:111001)</p>
+              <button type="button" class="btn btn-sm btn-primary" onclick="displayByPincode()">Search Availability &raquo;</button>
+              <div class="toggDat" id="toggDat"style="margin-top:20px; display:none;">
+                  <input type="text" id="pincode-input" placeholder="Enter pin-code" autocomplete="off" style="outline: none; border: 3px solid black; border-radius: 3px">
+                  <i class="fas fa-search" style="font-size:25px;" onclick="searchPincodeAvail()"></i>
+              </div>
+            </div>
+            <div class="col-auto d-none d-lg-block  getoverview">
+              <img src="https://images.unsplash.com/photo-1608326389386-0305acbe600f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=393&q=80" height="410" width="260">
+    
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Indian Vaccination</strong>
+              <h3 class="mb-0">Get Vaccine Availability using District-Code</h3>
+              <div class="mb-1 text-success" style="font-weight:bold;">Live</div>
+              <p class="mb-auto">This option will return you data of total vaccine availability at the Primary Health Centers at areas covered by pin-code entered by you.Use code in format of ex:276-B'lore Rural.</p>
+              <a href="./id.html" >Click to see your District Code</a>
+              <button type="button" class="btn btn-sm btn-primary" onclick="displayByDistrictcode()">Search Availability &raquo;</button>
+              <div class="togg" id="togg"style="margin-top:20px; display:none;">
+                <input type="text" id="dist-search" placeholder="Enter district-code" autocomplete="off" style="outline: none; border: 3px solid black; border-radius: 3px">
+                <i class="fas fa-search" style="font-size:25px;" onclick="searchDistAvail()"></i>
+            </div>
+            </div>
+            <div class="col-auto d-none d-lg-block getoverview">
+                <img src="https://images.unsplash.com/photo-1608243499710-5ebece89a37d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=420&q=80" height="410" width="260">
+    
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="live text-center">
+    <button type="button" class="btn btn-md btn-primary text-center" onclick="vaccineNews()">Click here to get Vaccine rel inf.</button>
+     </div>  
+    <div class="album py-5 bg-light">
+        <div class="container">
+    
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm text-dark">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal text-center">All Vaccines</h4>
+                  </div>
+    
+                <div class="card-body">
+                  <p class="card-text">Get the information of vaccines overall the world, which is certified , which is still in certain phases, which has failed etc....</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                          <button class="btn btn-md btn-outline-danger text-center " onclick="AllVaccines()">
+                            View &raquo;
+                          </button>
+                      
+                            </div>
+                            
+                        </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="card bg-dark text-white mb-4 shadow-sm ">
+                  <div class="card-header">
+                      <h4 class="my-0 font-weight-normal text-center">PHASE I</h4>
+                    </div>
+      
+                  <div class="card-body">
+                    <p class="card-text">Get the information of Phase I vaccines. Get category, funders,activity,FDA vigilance  etc....</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                            <button class="btn btn-md btn-outline-danger text-center " onclick="phaseOne()">
+                              View &raquo;
+                            </button>
+                        
+                              </div>
+                              
+                          </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm ">
+                  <div class="card-header">
+                      <h4 class="my-0 font-weight-normal text-center">PHASE II</h4>
+                    </div>
+      
+                  <div class="card-body">
+                    <p class="card-text">Get the information of Phase II vaccines. Get category, funders,activity,FDA vigilance  etc....</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                            <button class="btn btn-md btn-outline-danger text-center " onclick="phaseTwo()">
+                              View &raquo;
+                            </button>
+                        
+                              </div>
+                              
+                          </div>
+                  </div>
+                </div>
+              </div>
+    
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+    
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 bg-dark shadow-sm text-white">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal text-center">PHASE III</h4>
+                  </div>
+    
+                <div class="card-body">
+                  <p class="card-text">Get the information of Phase III vaccines. Get category, funders,activity,FDA vigilance  etc....</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                          <button class="btn btn-md btn-outline-danger text-center " onclick="phaseThree()">
+                            View &raquo;
+                          </button>
+                      
+                            </div>
+                            
+                        </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm ">
+                  <div class="card-header">
+                      <h4 class="my-0 font-weight-normal text-center">PHASE IV</h4>
+                    </div>
+      
+                  <div class="card-body">
+                    <p class="card-text">Get the information of Phase IV vaccines. Get category, funders,activity,FDA vigilance  etc....</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                            <button class="btn btn-md btn-outline-danger text-center " onclick="phaseFour()">
+                              View &raquo;
+                            </button>
+                        
+                              </div>
+                              
+                          </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card bg-dark text-white mb-4 shadow-sm ">
+                  <div class="card-header">
+                      <h4 class="my-0 font-weight-normal text-center">Treatments Tried OverWorld</h4>
+                    </div>
+      
+                  <div class="card-body">
+                    <p class="card-text">Get the treatment tried till date, success rate of that particular treatment.....</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                            <button class="btn btn-md btn-outline-danger text-center " onclick="treatment()">
+                              View &raquo;
+                            </button>
+                        
+                              </div>
+                              
+                          </div>
+                  </div>
+                </div>
+              </div>
+    
+
+          </div>
+        </div>
+      </div>
+    
+
+</main>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      
+      
+  </body>
+</html>

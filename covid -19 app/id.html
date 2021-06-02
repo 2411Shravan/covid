@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+    <title>Covid-19/Data</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/402ec5a488.js" crossorigin="anonymous"></script>
+    
+    <script src="./indiaData.js" defer></script>
+    <!-- Bootstrap core CSS -->
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+   
+
+    
+    <!-- Custom styles for this template -->
+    
+  </head>
+  <body>
+    
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark  fixed-top   text-white underitalics">
+          <a class="navbar-brand mr-auto text-warning under" href=""><h3>Covie-Data</h3></a>
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./index.html"><h4>Home</h4></a>
+              </li>
+              <li class="nav-item  ">
+                <a class="nav-link text-right" href="./data.html"><h4>Covid-19 Data</h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./vaccine.html"><h4>Vaccine Portal</h4></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-right" href="./id.html"><h4>ID's</h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./dashboard.html"><h4>Dashboard</h4></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-right" href="./about.html"><h4>About</h4></a>
+              </li>
+            </ul>
+            
+          </div>
+        </nav>
+      </header>
+
+<main   id="main">
+
+<div class="container guvce" >
+    <div class="states">
+        <button type="button" class="btn btn-lg btn-primary" onclick="getStates()">Click here to know your State ID &raquo;</button>
+    </div>
+    <div class="dist">
+      <button type="button" class="btn btn-lg btn-primary" onclick="toggleEl()">Click here to know your District ID &raquo;</button>
+      <div class="dist-toggle" id="dist-toggle">
+        <input type="text" class="dist-search" id="dist-search" autocomplete="off" placeholder="Enter your State ID"/>
+        <i class="fas fa-search" onclick="seeCountryFullData()"></i>
+      </div>
+      
+    </div>
+</div>
+ 
+
+</main>
+
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+
+      
+    }
+
+    main{
+        
+        background: url('./er.jpg');
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+       
+      }
+      .navbar{
+        background:black;
+      }
+      .guvce{
+        padding-top:150px;
+      }
+      .btn-primary{
+        margin-bottom: 50px;
+        width: 300px;
+        font-size:15px;
+      }
+      i{
+        font-size:35px;
+        cursor: pointer;
+        color:black;
+      }
+
+      .guvce input[type="text"]{
+        outline:none;
+        
+        border: 4px solid black;
+        border-radius:4px;
+      }
+      .dist-toggle{
+        display:none;
+      }
+      .underitalics .under{
+      text-decoration: underline;
+      font-style: oblique;
+      }
+      h1,  h3, h4, h5{
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      }
+      .row{
+        margin-top:70px;
+      }
+  </style>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      
+      
+  </body>
+</html>

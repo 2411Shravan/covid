@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+
+body{
+  border-radius: 17px;
+  background: url('./er.jpg');
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  
+}
+
+.jumbotron {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+main{
+  margin-top:50px;
+  
+
+    
+  
+}
+.container{
+  margin-bottom:50px;
+}
+.news-source{
+  font-family: 'Times New Roman', Times, serif;
+}
+.underitalics .under{
+  text-decoration: underline;
+  font-style: oblique;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  
+  
+}
+ul li h4{
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+.navbar{
+  background:black;
+}
+
+.news-body{
+  padding-top:20px;
+  padding-bottom:30px;
+  margin-top:50px;
+  background: rgb(6, 16, 55);
+  border-radius: 4px;
+  text-align: center;
+  color:white;
+}
+.card-header h3{
+  font-family: 'Merriweather', serif;
+  font-weight: bolder;
+}
+.manage-data{
+  margin-top:100px;
+}
+.new-confirm h4{
+  
+  font-weight: bolder;
+  text-decoration:none;
+}
+.updation h5{
+  font-family: 'Merriweather', serif;
+}
+.world-total{
+  background:rgba(211, 34, 34, 0.699);
+  margin-top:50px;
+}
+.news-title{
+  font-family: 'PT Serif', serif;
+  padding-top:25px;
+  color:rgba(193, 221, 226, 0.822);
+}
+.world-info{
+  background:rgba(37, 126, 177, 0.438);
+  margin-top:100px;
+
+}
+.display-message{
+  padding-top:70px;
+}
+
+
+.news-publish{
+  padding-top:10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1,  h3, h4, h5{
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+.card button{
+  padding-left: 50px;
+  padding-right:50px;
+  
+}
+
+
+#toggleSe{
+  display: none;
+}
+#toggleDa{
+  display: none;
+}
+.card-body input[type="text"]{
+  width:180px;
+  height: 30px;
+}
+.card-body .fa-search{
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.jumbotron h2 {
+  font-family: 'Playfair Display', serif;
+}
+.liveData h6{
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:150;
+  font-variant: small-caps;
+  font-size: 18px;
+
+}
+
+
+
+
+
+
+
+.blob {
+	background: black;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	height: 40px;
+	width: 40px;
+	transform: scale(1);
+	animation: pulse-black 0.5s infinite;
+}
+
+
+.blob.green {
+	background: rgba(51, 217, 178, 1);
+	box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
+	animation: pulse-green 1s infinite;
+}
+
+@keyframes pulse-green {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(51, 152, 178, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(98, 217, 146, 0);
+	}
+	
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(51, 217, 66, 0);
+	}
+}
+
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
