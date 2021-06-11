@@ -676,7 +676,7 @@ function showDistrictWise(diData){
                             <h6 class=" ">Deceased - ${distRes.deceased}</h6>
                         </div>
                        <div class="countr-deaths">
-                           <h6 class=" ">Total Deaths - ${distRes.recovered}</h6>
+                           <h6 class=" ">Total Recovered - ${distRes.recovered}</h6>
                        </div>
                        <div class="countr-deaths">
                            <h6 class=" ">Updated On - ${uptime}</h6>
